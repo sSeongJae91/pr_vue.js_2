@@ -18,6 +18,12 @@ git branch -M main
 git remote add origin https://github.com/sSeongJae91/pr_vue.js_2.git
 git push -u origin main
 
+## axios
+> $ npm install axios --save
+
+## vuex
+> $ npm install vuex --save
+
 
 ## Build Setup
 
