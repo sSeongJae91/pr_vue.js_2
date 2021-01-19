@@ -2,6 +2,23 @@
 
 > A Vue.js project
 
+## init
+> $ vue init webpack board-example-frontend<br/>
+vue-router - o<br/>
+eslint - x<br/>
+unit test - x<br/>
+e2e unit - x<br/>
+
+## git
+echo "# pr_vue.js_2" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sSeongJae91/pr_vue.js_2.git
+git push -u origin main
+
+
 ## Build Setup
 
 ``` bash
