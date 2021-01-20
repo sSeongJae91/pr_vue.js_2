@@ -7,7 +7,7 @@
             <input type="password"
                 v-model="password"
                 placeholder="비밀번호를 입력해주세요."/>
-            <button type="submig">로그인</button>
+            <button type="submit">로그인</button>
         </fieldset>
     </form>
 </template>
@@ -18,6 +18,12 @@ export default {
         return {
             email: '',
             password: ''
+        }
+    },
+    methods: {
+        submit () {
+            const {email, password} = this
+            this.$emit('submit', {email, password})
         }
     }
 }
