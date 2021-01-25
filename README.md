@@ -24,6 +24,8 @@ git push -u origin main
 ## vuex
 > $ npm install vuex --save
 
+## js-cookie
+>$ npm install js-cookie --save
 
 ## Build Setup
 
