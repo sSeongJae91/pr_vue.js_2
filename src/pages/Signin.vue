@@ -11,6 +11,7 @@
 import SigninForm from '@/components/SigninForm'
 
 import api from '@/api'
+import {mapActions} from 'vuex'
 
 export default {
     name: 'Signin',
@@ -19,13 +20,16 @@ export default {
     },
     methods: {
         onSubmit (payload) {
-            console.log(payload)
-            const {email, password} = payload
-            api.post('/auth/signin', {email, password})
+            this.signin(payload)
                 .then(res => {
-                    console.log(res.data)
+                    alert('로그인이 완료되었습니다.')
+                    this.$router.push({ name: 'PostListPage' })
                 })
-        }
+                .catch(err => {
+                    alert(err.message)
+                })
+        },
+        ...mapActions (['signin'])
     }
 }
 </script>
