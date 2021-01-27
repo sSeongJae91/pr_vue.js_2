@@ -5,6 +5,7 @@ import PostViewPage from '@/pages/PostViewPage'
 import Signup from '@/pages/Signup'
 import Signin from '@/pages/Signin'
 import AppHeader from '@/components/AppHeader'
+import PostCreatePage from '@/pages/PostCreatePage'
 
 Vue.use(Router)
 
@@ -15,6 +16,14 @@ export default new Router({
       path: '/',
       name: 'PostListPage',
       component: PostListPage
+    },
+    {
+      path: '/post/create',
+      name: 'PostCreatePage',
+      components: {
+        header: AppHeader,
+        default: PostCreatePage
+      }
     },
     {
       path: '/post/:postId',
