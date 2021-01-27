@@ -6,6 +6,7 @@ import Signup from '@/pages/Signup'
 import Signin from '@/pages/Signin'
 import AppHeader from '@/components/AppHeader'
 import PostCreatePage from '@/pages/PostCreatePage'
+import store from '@/store'
 
 Vue.use(Router)
 
@@ -23,6 +24,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: PostCreatePage
+      },
+      beforeEnter (to, from, next){
+        const {isAuthorized} = store.getters
+
+        if(!isAuthorized){
+          alert('로그인이 필요합니다!!')
+          next({name: 'Signin'})
+        }
+        next()
       }
     },
     {
