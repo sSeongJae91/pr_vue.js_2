@@ -15,13 +15,13 @@ export default {
     data() {
         return {
             title: '',
-            content: ''
+            contents: ''
         }
     },
     methods: {
         onSubmit () {
             const {title, contents} = this
-            this.$emit('submit', {title, content})
+            this.$emit('submit', {title, contents})
         }
     }
 }
