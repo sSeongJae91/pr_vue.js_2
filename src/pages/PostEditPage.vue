@@ -7,15 +7,15 @@
 </template>
 <script>
 import {mapState} from 'vuex'
-import PostEditForm from '@/compoenets/PostEditForm'
+import PostEditForm from '@/components/PostEditForm'
 import api from '@/api'
 
 export default {
     name: 'PostEditPage',
     components: { PostEditForm },
     methods: {
-        omSubmit (payload) {
-            const {title, content} = this
+        onSubmit (payload) {
+            const {title, contents} = payload
 
             api.put(`/posts/${this.postId}`, {title, contents})
                 .then(res => {
